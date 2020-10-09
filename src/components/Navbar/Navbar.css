@@ -1,0 +1,74 @@
+/* Add a black background color to the top navigation */
+.topnav {
+	position: fixed;
+	z-index: 500;
+	background-color: white;
+	overflow: hidden;
+	width: 100%;
+}
+
+.brand {
+	position: relative;
+	font-size: 15px;
+	text-align: center;
+	color: #054752;
+	float: left;
+	margin: 0px;
+	padding: 8px 8px;
+	cursor: pointer;
+}
+
+.brand h2 {
+	margin: 0px;
+}
+
+.logo {
+	cursor: pointer;
+	position: relative;
+	top: 5px;
+	height: 35px;
+	margin: 0px 16px;
+	float: left;
+}
+
+/* Style the links inside the navigation bar */
+.topnav a {
+	float: right;
+	color: #22c0e8;
+	text-align: center;
+	padding: 14px 16px;
+	text-decoration: none;
+	font-size: 15px;
+	font-weight: 800;
+	display: block;
+	-webkit-tap-highlight-color: transparent;
+}
+
+/* Change the color of links on hover */
+.topnav a:hover {
+	border-bottom: solid 2px #22c0e8;
+	color: #22c0e8;
+	inset-block: initial;
+}
+
+/* Add a color to the active/current link */
+.topnav a.active {
+	border-bottom: solid 2px #22c0e8;
+	color: #22c0e8;
+	inset-block: inherit;
+}
+
+@media screen and (max-width: 600px) {
+	.topnav a:not(:first-child) {
+		display: none;
+	}
+	.topnav a.icon {
+		float: right;
+		display: block;
+	}
+	.topnav a:hover {
+		border-bottom: solid 2px #22c0e8;
+		color: white;
+		inset-block: initial;
+	}
+}

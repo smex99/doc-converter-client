@@ -1,26 +1,27 @@
 import React from 'react';
-import logo from './logo.svg';
+import { autorun } from 'mobx';
+import { observer } from 'mobx-react-lite';
+import Navbar from './components/Navbar/Navbar';
+import Footer from './components/Footer/Footer';
+import userStore from './store/user.store';
+
 import './App.css';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+const App: React.SFC<React.ReactNode> = observer((props) => {
+	const store = React.useContext(userStore);
+	autorun(() => {
+		store.getUserFromToken();
+	});
+
+	return (
+		<div className='app'>
+			<Navbar isAuth={store.isAuthenticated} />
+			<div className='main' id='main'>
+				<div className='container'>{props.children}</div>
+			</div>
+			<Footer />
+		</div>
+	);
+});
 
 export default App;

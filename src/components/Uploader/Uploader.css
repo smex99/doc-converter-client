@@ -1,0 +1,11 @@
+.upload-card {
+	display: flex;
+	justify-content: flex-start;
+	align-items: flex-start;
+	min-width: 500px;
+	padding: 16px;
+	background-color: white;
+	border-style: dashed;
+	border-color: rgb(124, 119, 119);
+	box-sizing: border-box;
+}

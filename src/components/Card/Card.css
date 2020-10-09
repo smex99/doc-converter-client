@@ -1,0 +1,51 @@
+* {
+	box-sizing: border-box;
+}
+
+.card {
+	/* Add shadows to create the "card" effect */
+	box-shadow: 0 4px 8px 0 rgba(100, 99, 99, 0.1);
+	transition: 0.3s;
+	width: 600px;
+	margin: 8px 0px;
+	background-color: white;
+}
+
+/* On mouse-over, add a deeper shadow */
+.card:hover {
+	box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.1);
+}
+
+/* Add some padding inside the card container */
+.card-container {
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: column;
+	padding: 8px;
+}
+
+.card.title {
+	color: rgb(64, 64, 241);
+}
+
+.card-actions {
+	margin: 8px;
+}
+
+.annonce-info {
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: space-between;
+	text-align: center;
+	margin: 0px 30px;
+	border-top: 1px solid rgb(211, 209, 209);
+}
+
+.annonce-info p {
+	color: grey;
+}
+
+.annonce-info .icon {
+	margin: 16px 16px;
+	font-size: 20px;
+}
